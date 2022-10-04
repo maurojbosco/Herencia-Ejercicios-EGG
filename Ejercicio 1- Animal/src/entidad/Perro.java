@@ -1,10 +1,13 @@
 package entidad;
 
 public class Perro extends Animal {
-    
-    public Perro(String nombre, String alimento, int edad, String raza){
+
+    // Constructor
+    public Perro(String nombre, String alimento, int edad, String raza) {
         super(nombre, alimento, edad, raza);
     }
+
+    // Método del parent modificado
     @Override
     public void Alimentarse() {
         String comida = this.alimento;
@@ -17,7 +20,7 @@ public class Perro extends Animal {
         if (this.alimento.equalsIgnoreCase("herbivoro")) {
             comida = "Vegetales";
         }
-        System.out.println("Soy un perro, me llamo "+ this.nombre +" y me alimento de " + comida );
-        
+        System.out.println("Soy un perro, me llamo " + this.nombre + " y me alimento de " + comida);
+
     }
 }
