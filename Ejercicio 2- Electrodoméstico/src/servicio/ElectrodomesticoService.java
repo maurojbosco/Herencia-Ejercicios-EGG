@@ -1,16 +1,18 @@
 package servicio;
 
 import entidad.Electrodomestico;
+
 import java.util.Scanner;
 
 public class ElectrodomesticoService {
-    protected Electrodomestico electro;
+    protected Electrodomestico electro = new Electrodomestico();
     protected Scanner sn = new Scanner(System.in);
 
     // Método que crea un elecrtrodoméstico pidiendo los datos por teclado
     public void crearElectrodomestico() {
         System.out.println("Ingrese el color del electrodoméstico");
-        this.electro.setColor(sn.next());
+        String color = sn.next();
+        this.electro.setColor(color);
         System.out.println("Ingrese el tipo de consumo energético");
         this.electro.setConsumoEnergetico(sn.next().charAt(0));
         System.out.println("Ingrese el peso del electrodoméstico");

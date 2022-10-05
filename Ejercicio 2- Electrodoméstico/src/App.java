@@ -1,3 +1,6 @@
+import servicio.LavadoraService;
+import servicio.TelevisorService;
+
 /*Crear una superclase llamada Electrodoméstico con los siguientes atributos: precio, color, 
 consumo energético (letras entre A y F) y peso.
 Los constructores que se deben implementar son los siguientes:
@@ -48,6 +51,7 @@ funcionalidad. Si tiene una carga mayor de 30 kg, aumentará el precio en $500, 
 carga es menor o igual, no se incrementará el precio. Este método debe llamar al 
 método padre y añadir el código necesario. Recuerda que las condiciones que hemos 
 visto en la clase Electrodoméstico también deben afectar al precio.
+
 Se debe crear también una subclase llamada Televisor con los siguientes atributos: 
 resolución (en pulgadas) y sintonizador TDT (booleano), además de los atributos 
 heredados. 
@@ -55,8 +59,6 @@ Los constructores que se implementarán serán:
 • Un constructor vacío.
 • Un constructor con la resolución, sintonizador TDT y el resto de los atributos
 heredados. Recuerda que debes llamar al constructor de la clase padre.
-
-14
 Los métodos que se implementara serán:
 • Método get y set de los atributos resolución y sintonizador TDT.
 • Método crearTelevisor(): este método llama a crearElectrodomestico() de la clase 
@@ -73,6 +75,13 @@ el precio final de los dos electrodomésticos. */
 
 public class App {
     public static void main(String[] args) {
-        
+        LavadoraService lavadora = new LavadoraService();
+        TelevisorService televisor = new TelevisorService();
+        lavadora.crearLavadora();
+        televisor.crearTelevisor();
+        lavadora.precioFinal();
+        televisor.precioFinal();
+        lavadora.mostrarLavadora();
+        televisor.mostrarTelevisor();
     }
 }

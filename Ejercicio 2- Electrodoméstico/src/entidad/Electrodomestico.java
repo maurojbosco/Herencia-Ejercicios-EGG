@@ -3,7 +3,7 @@ package entidad;
 public class Electrodomestico {
 
     // Atributos
-    protected int precio;
+    protected double precio;
     protected String color;
     protected char consumoEnergetico;
     protected int peso;
@@ -20,11 +20,11 @@ public class Electrodomestico {
     }
 
     // Getters Y Setters
-    public int getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 
