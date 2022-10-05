@@ -18,6 +18,20 @@ electrodoméstico, también llama los métodos para comprobar el color y el cons
 precio se le da un valor base de $1000.
 • Método precioFinal(): según el consumo energético y su tamaño, aumentará el valor del 
 precio. Esta es la lista de precios:
+
+LETRA   PRECIO
+A       $1000
+B       $800
+C       $600
+D       $500
+E       $300
+F       $100
+PESO              PRECIO
+Entre 1 y 19 kg   $100
+Entre 20 y 49 kg  $500
+Entre 50 y 79 kg  $800
+Mayor que 80 kg   $1000
+
 A continuación, se debe crear una subclase llamada Lavadora, con el atributo carga, 
 además de los atributos heredados.
 Los constructores que se implementarán serán:
@@ -41,18 +55,7 @@ Los constructores que se implementarán serán:
 • Un constructor vacío.
 • Un constructor con la resolución, sintonizador TDT y el resto de los atributos
 heredados. Recuerda que debes llamar al constructor de la clase padre.
-LETRA   PRECIO
-A       $1000
-B       $800
-C       $600
-D       $500
-E       $300
-F       $100
-PESO              PRECIO
-Entre 1 y 19 kg   $100
-Entre 20 y 49 kg  $500
-Entre 50 y 79 kg  $800
-Mayor que 80 kg   $1000
+
 14
 Los métodos que se implementara serán:
 • Método get y set de los atributos resolución y sintonizador TDT.
