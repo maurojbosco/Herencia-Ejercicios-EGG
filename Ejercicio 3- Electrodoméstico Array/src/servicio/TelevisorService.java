@@ -39,7 +39,7 @@ public class TelevisorService extends ElectrodomesticoService {
         super.precioFinal();
         this.tele.setPrecio(this.electro.getPrecio());
         if (tele.getResolucion() > 40) {
-            tele.setPrecio(tele.getPrecio() + tele.getPrecio() * 0.3);
+            tele.setPrecio(tele.getPrecio() + (tele.getPrecio() * 0.3));
         }
         if (tele.isSintonizadorTDT()) {
             tele.setPrecio(tele.getPrecio() + 500);
@@ -48,6 +48,15 @@ public class TelevisorService extends ElectrodomesticoService {
     //Método que muetra el televisor por pantalla
     public void mostrarTelevisor() {
         System.out.println(tele.toString());
+    }
+
+    public double getPrecioTele() {
+        return tele.getPrecio();
+    }
+
+    @Override
+    public String toString() {
+        return "TelevisorService [tele=" + tele + "]";
     }
 
 }

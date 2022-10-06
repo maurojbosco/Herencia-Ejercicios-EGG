@@ -36,23 +36,20 @@ public class App {
         listaElectro.add(new Lavadora(12000,"azul", 'B', 43, 22  ));
         listaElectro.add(new Lavadora(8000,"negro", 'F', 25, 14  ));
         
-        List<ElectrodomesticoService> listaService = new ArrayList<>();
         double sumTele = 0;
         double sumLava = 0;
         for (Electrodomestico electrodomestico : listaElectro) {
             if (electrodomestico instanceof Lavadora) {
                 LavadoraService elec = new LavadoraService(electrodomestico, (Lavadora)electrodomestico);
                 elec.precioFinal();
-                Lavadora lava = new Lavadora(elec);
-                sumLava += lava.getPrecio();
-                System.out.println(lava.toString());
+                sumLava += elec.getPrecioLava();
+                System.out.println(elec.toString());
             }
             if (electrodomestico instanceof Televisor) {
                 TelevisorService elec = new TelevisorService(electrodomestico, (Televisor)electrodomestico);
                 elec.precioFinal();
-                Televisor tele = new Televisor(elec);
-                sumTele += tele.getPrecio();
-                System.out.println(tele.toString());
+                sumTele += elec.getPrecioTele();
+                System.out.println(elec.toString());
             }
         }
         System.out.println("La suma del precio de los televisores es $ "+ sumTele);

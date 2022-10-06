@@ -5,6 +5,7 @@ import entidad.Lavadora;
 
 public class LavadoraService extends ElectrodomesticoService {
 
+
     private Lavadora lava = new Lavadora();
     
 
@@ -41,5 +42,15 @@ public class LavadoraService extends ElectrodomesticoService {
     //Método que muestra la Lavadora por pantalla
     public void mostrarLavadora() {
         System.out.println(lava.toString());
+    }
+
+    public double getPrecioLava() {
+        return lava.getPrecio();
+    }
+
+    
+    @Override
+    public String toString() {
+        return "LavadoraService [lava=" + lava + "]";
     }
 }

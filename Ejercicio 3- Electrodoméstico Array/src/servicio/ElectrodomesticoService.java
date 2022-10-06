@@ -52,13 +52,13 @@ public class ElectrodomesticoService {
                 break;
         }
         if (this.electro.getPeso() >= 1 && this.electro.getPeso() <= 19) {
-            this.electro.setPeso(this.electro.getPeso() + 100);
+            this.electro.setPrecio(this.electro.getPrecio() + 100);
         } else if (this.electro.getPeso() >= 20 && this.electro.getPeso() <= 49) {
-            this.electro.setPeso(this.electro.getPeso() + 500);
+            this.electro.setPrecio(this.electro.getPrecio() + 500);
         } else if (this.electro.getPeso() >= 50 && this.electro.getPeso() <= 79) {
-            this.electro.setPeso(this.electro.getPeso() + 800);
+            this.electro.setPrecio(this.electro.getPrecio() + 800);
         } else if (this.electro.getPeso() >= 80) {
-            this.electro.setPeso(this.electro.getPeso() + 1000);
+            this.electro.setPrecio(this.electro.getPrecio() + 1000);
         }
     }
 }
