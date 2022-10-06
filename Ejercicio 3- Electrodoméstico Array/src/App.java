@@ -4,7 +4,6 @@ import java.util.List;
 import entidad.Electrodomestico;
 import entidad.Lavadora;
 import entidad.Televisor;
-import servicio.ElectrodomesticoService;
 import servicio.LavadoraService;
 import servicio.TelevisorService;
 
