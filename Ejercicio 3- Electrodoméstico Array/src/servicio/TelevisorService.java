@@ -1,10 +1,20 @@
 package servicio;
 
+import entidad.Electrodomestico;
 import entidad.Televisor;
 
 public class TelevisorService extends ElectrodomesticoService {
 
     private Televisor tele = new Televisor();
+
+    public TelevisorService() {
+
+    }
+
+    public TelevisorService(Electrodomestico electro, Televisor tele) {
+        super(electro);
+        this.tele = tele;
+    }
 
     public void crearTelevisor() {
         System.out.println("Se va a crear un televisor");

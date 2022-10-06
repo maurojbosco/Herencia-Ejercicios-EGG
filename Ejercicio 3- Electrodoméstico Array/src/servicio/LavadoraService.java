@@ -1,10 +1,21 @@
 package servicio;
 
+import entidad.Electrodomestico;
 import entidad.Lavadora;
 
 public class LavadoraService extends ElectrodomesticoService {
 
     private Lavadora lava = new Lavadora();
+    
+
+
+    public LavadoraService() {
+    }
+
+    public LavadoraService(Electrodomestico electro, Lavadora lava) {
+        super(electro);
+        this.lava = lava;
+    }
 
     public void crearLavadora() {
         System.out.println("Se va a crear una lavadora");
