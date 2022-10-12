@@ -8,6 +8,19 @@ resultado final.
 Área circulo: PI * radio ^ 2 / Perímetro circulo: PI * diámetro.
 Área rectángulo: base * altura / Perímetro rectángulo: (base + altura) * 2.
  */
-public class App {
 
+import entidad.Circulo;
+import entidad.Rectangulo;
+
+public class App {
+    public static void main(String[] args) {
+            
+    Circulo circu = new Circulo(4.4);
+    Rectangulo rect = new Rectangulo();
+
+    circu.calcularArea();
+    circu.calcularPerimetro();
+    rect.calcularArea();
+    rect.calcularPerimetro();
+    }
 }
