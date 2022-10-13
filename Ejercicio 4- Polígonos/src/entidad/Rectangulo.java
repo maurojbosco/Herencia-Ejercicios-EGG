@@ -1,12 +1,12 @@
 package entidad;
 
-import interfaz.calculosFormas;
+public class Rectangulo {
 
-public class Rectangulo implements calculosFormas {
-
+    // Atributos
     private double base;
     private double altura;
-    
+
+    // Constructores
     public Rectangulo(double base, double altura) {
         this.base = base;
         this.altura = altura;
@@ -15,6 +15,7 @@ public class Rectangulo implements calculosFormas {
     public Rectangulo() {
     }
 
+    // Getters y Setters
     public double getBase() {
         return base;
     }
@@ -31,21 +32,10 @@ public class Rectangulo implements calculosFormas {
         this.altura = altura;
     }
 
+    // To string
     @Override
     public String toString() {
         return "Rectangulo [base=" + base + ", altura=" + altura + "]";
     }
 
-    @Override
-    public void calcularArea() {
-        System.out.println("EL área del rectángulo es igual a: " + this.base * this.altura);
-
-    }
-
-    @Override
-    public void calcularPerimetro() {
-        System.out.println("EL perímetro del rectángulo es igual a: " + (this.base + this.altura) * 2);
-
-    }
-    
 }

@@ -4,8 +4,8 @@ public interface calculosFormas {
 
     public double PI = Math.PI;
 
-    public void calcularArea ();
+    public void calcularArea();
 
-    public void calcularPerimetro ();
+    public void calcularPerimetro();
 
 }

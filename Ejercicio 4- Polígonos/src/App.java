@@ -9,18 +9,22 @@ resultado final.
 Área rectángulo: base * altura / Perímetro rectángulo: (base + altura) * 2.
  */
 
-import entidad.Circulo;
-import entidad.Rectangulo;
+import servicio.CirculoService;
+import servicio.RectanguloService;
 
 public class App {
     public static void main(String[] args) {
-            
-    Circulo circu = new Circulo(4.4);
-    Rectangulo rect = new Rectangulo();
 
-    circu.calcularArea();
-    circu.calcularPerimetro();
-    rect.calcularArea();
-    rect.calcularPerimetro();
+        // Se instancia un objeto circulo y otro rectangulo
+        CirculoService circu = new CirculoService();
+        RectanguloService rect = new RectanguloService();
+
+        // Se llaman los metodos de los servicios de ambos objetos
+        circu.crearCirculo();
+        circu.calcularArea();
+        circu.calcularPerimetro();
+        rect.crearRectangulo();
+        rect.calcularArea();
+        rect.calcularPerimetro();
     }
 }

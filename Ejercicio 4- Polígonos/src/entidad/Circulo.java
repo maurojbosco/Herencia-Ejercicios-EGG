@@ -1,10 +1,11 @@
 package entidad;
 
-import interfaz.calculosFormas;
+public class Circulo {
 
-public class Circulo implements calculosFormas {
+    // Atributo
     private double radio;
 
+    // Constructores
     public Circulo(double radio) {
         this.radio = radio;
     }
@@ -12,6 +13,7 @@ public class Circulo implements calculosFormas {
     public Circulo() {
     }
 
+    // Setters y Getters
     public double getRadio() {
         return radio;
     }
@@ -20,23 +22,10 @@ public class Circulo implements calculosFormas {
         this.radio = radio;
     }
 
+    // To String
     @Override
     public String toString() {
         return "Circulo [radio=" + radio + "]";
     }
 
-    
-    @Override
-    public void calcularArea() {
-        System.out.println("El área del círculo es igual a: " + PI * (this.radio * this.radio));
-
-    }
-
-    @Override
-    public void calcularPerimetro() {
-        System.out.println("El perímetro del círculo es igual a: " + PI * (this.radio + this.radio));
-
-    }
-
-    
 }
